@@ -49,7 +49,7 @@ git commit -m "my first commit"
 ブランチの作成: ブランチを作成して、変更の独立したセットを管理することができます。ブランチは、開発の並行処理や機能の追加などに役立ちます。次のコマンドを使用して、新しいブランチを作成します：
 
 ```bash
-git branch ブランチ名
+git branch -M main
 ```
 ブランチ名には、新しいブランチの名前を指定します。
 
@@ -92,9 +92,19 @@ git push origin master
 gitを初期化して、GitHubにプッシュするにはつぎのコマンドを打つ。
 適宜プロジェクト名は変更して使う。
 
+初回
 ```bash
 git init
 git add .
 git commit -m "my first commit"
-git push -u origin HEAD
+git branch -M main
+git remote add origin https://github.com/NishioRyota/my_test.git
+git push -u origin main
+```
+
+２回目以降
+```bash
+git add .
+git commit -m "second commit"
+git push -u origin main
 ```
